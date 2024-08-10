@@ -1,4 +1,4 @@
 #!/bin/sh
 
-echo "Running fpp-plugin-Template PostStart Script"
+#echo "Running fpp-plugin-Template PostStart Script"
 
