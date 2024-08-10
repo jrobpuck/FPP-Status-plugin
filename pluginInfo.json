@@ -7,26 +7,10 @@
 	"srcURL": "https://github.com/jrobpuck/FPP-Status-plugin",
 	"bugURL": "https://github.com/jrobpuck/FPP-Status-plugin/issues",
 	"allowUpdates": 1,
-	"versions": [
-		{
-			"minFPPVersion": "2.0",
-			"maxFPPVersion": "0",
-			"branch": "master",
-			"sha": "",
-			"dependencies": {
-			    "plugins": [
-					"fpp-plugin-CoolPlugin1",
-					"fpp-plugin-CoolPlugin2"
-				],
-			    "packages": [
-					"system-package-name1",
-					"system-package-name2"
-				],
-				"scripts": [
-					"Control/script-repository-script1",
-					"PixelOverlay/script-repository-script2"
-				]
-			}
-		}
-	]
+	"commands": [
+    {
+      "command": "run_script",
+      "description": "Runs the Python script to update the now playing song."
+    }
+  ]
 }
