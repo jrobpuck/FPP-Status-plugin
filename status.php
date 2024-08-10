@@ -1,7 +1,7 @@
 <?php
 
 // Path to store the configuration (e.g., website URL)
-$configFile = "/home/fpp/media/plugins/<YourPluginName>/config.ini";
+$configFile = "/home/fpp/media/plugins/FPP-Status-plugin/config.ini";
 
 // Save settings if the form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

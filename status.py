@@ -17,7 +17,7 @@ if not website_url:
     exit()
 
 # FPP API URL to fetch the currently playing song
-fpp_api_url = "http://<fpp_ip_address>/api/fppd/status"
+fpp_api_url = "http://192.168.0.156/api/fppd/status"
 
 try:
     # Fetch the FPPD status from the FPP API
