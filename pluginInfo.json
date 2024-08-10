@@ -6,7 +6,16 @@
 	"homeURL": "https://github.com/jrobpuck/FPP-Status-plugin",
 	"srcURL": "https://github.com/jrobpuck/FPP-Status-plugin",
 	"bugURL": "https://github.com/jrobpuck/FPP-Status-plugin/issues",
-	"allowUpdates": 1
-
-  
+	"allowUpdates": 1,
+	"versions": [
+		{
+			"minFPPVersion": "0",
+			"maxFPPVersion": "0",
+			"branch": "main",
+			"sha": "",
+			"platforms": [
+				"Raspberry Pi"
+			]
+		}
+	]
 }
