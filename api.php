@@ -22,27 +22,6 @@ Here is a simple example which would add a
 */
 
 
-function getEndpointsfppBigButtons() {
-    $result = array();
-
-    $ep = array(
-        'method' => 'GET',
-        'endpoint' => 'version',
-        'callback' => 'fppBigButtonsVersion');
-
-    array_push($result, $ep);
-
-    return $result;
-}
-
-// GET /api/plugin/fpp-BigButtons/version
-function fppBigButtonsVersion() {
-    $result = array();
-    $result['version'] = 'fpp-BigButtons v1.2.3';
-
-    return json($result);
-}
-
 // Check for the 'command' parameter in the request
 if (isset($_GET['command'])) {
     $command = $_GET['command'];
