@@ -15,7 +15,7 @@ $menuEntries = Array(
 	Array(
 		'text' => 'Status Plugin',
 		'type' => 'status',
-		'page' => 'Status.php',
+		'page' => 'status.php',
 		'wrap' => 1
 	)
 );
