@@ -43,33 +43,5 @@ function fppBigButtonsVersion() {
     return json($result);
 }
 
-// Check for the 'command' parameter in the request
-if (isset($_GET['command'])) {
-    $command = $_GET['command'];
-
-    switch ($command) {
-        case "run_script":
-            // Execute the Python script
-            $output = [];
-            $return_var = 0;
-
-            exec("python3 /home/fpp/media/plugins/<YourPluginName>/scripts/script.py", $output, $return_var);
-
-            // Respond with the output and status
-            echo json_encode([
-                "output" => implode("\n", $output),
-                "status" => $return_var
-            ]);
-            break;
-
-        // Add more cases for additional commands if needed
-
-        default:
-            echo json_encode(["error" => "Unknown command"]);
-            break;
-    }
-} else {
-    echo json_encode(["error" => "No command provided"]);
-}
 
 ?>
