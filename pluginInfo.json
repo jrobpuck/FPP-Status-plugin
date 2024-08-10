@@ -7,6 +7,7 @@
 	"srcURL": "https://github.com/jrobpuck/FPP-Status-plugin",
 	"bugURL": "https://github.com/jrobpuck/FPP-Status-plugin/issues",
 	"allowUpdates": 1,
+	"callbackTypes": ["media"],
 	"versions": [
 		{
 			"minFPPVersion": "0",
