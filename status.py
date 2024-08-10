@@ -2,7 +2,7 @@ import requests
 import os
 
 # Path to the config file
-config_file = "/home/fpp/media/plugins/<YourPluginName>/config.ini"
+config_file = "/home/fpp/media/plugins/FPP-Status-plugin/config.ini"
 
 # Load the website URL from the config file
 website_url = ""
