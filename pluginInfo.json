@@ -2,15 +2,11 @@
 	"repoName": "FPP-Status-plugin",
 	"name": "FPP Status plugin",
 	"author": "Josh Robison (jrobpuck)",
-	"description": "This template plugin is designed to make it easier for plugin authors to create new FPP Plugins.  You can manually clone the git repository or install the Template Plugin and then go to the plugin's config page and use the form to copy the template into a new plugin directory.",
+	"description": "This plugin automatically updates a website with the currently playing song from FPP.",
 	"homeURL": "https://github.com/jrobpuck/FPP-Status-plugin",
 	"srcURL": "https://github.com/jrobpuck/FPP-Status-plugin",
 	"bugURL": "https://github.com/jrobpuck/FPP-Status-plugin/issues",
-	"allowUpdates": 1,
-	"commands": [
-    {
-      "command": "run_script",
-      "description": "Runs the Python script to update the now playing song."
-    }
-  ]
+	"allowUpdates": 1
+
+  
 }

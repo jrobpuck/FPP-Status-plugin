@@ -1,13 +1,28 @@
 import requests
-import json
+import os
+
+# Path to the config file
+config_file = "/home/fpp/media/plugins/<YourPluginName>/config.ini"
+
+# Load the website URL from the config file
+website_url = ""
+if os.path.exists(config_file):
+    with open(config_file, 'r') as file:
+        for line in file:
+            if line.startswith("website_url="):
+                website_url = line.strip().split('=', 1)[1]
+
+if not website_url:
+    print("Website URL not configured.")
+    exit()
 
 # FPP API URL to fetch the currently playing song
-fpp_api_url = "http://192.168.0.156/api/fppd/status"
+fpp_api_url = "http://<fpp_ip_address>/api/fppd/status"
 
 try:
     # Fetch the FPPD status from the FPP API
     response = requests.get(fpp_api_url)
-    response.raise_for_status()  # Check if the request was successful
+    response.raise_for_status()
     
     # Parse the JSON response
     status_data = response.json()
@@ -25,12 +40,9 @@ try:
     # Prepare the payload to send to your website
     payload = {'song': song_info}
 
-    # Website URL to update the now playing song
-    website_url = "http://192.168.0.72:5000/update_song.php"
-
     # Send the song information to your website
     response = requests.post(website_url, data=payload)
-    response.raise_for_status()  # Check if the POST request was successful
+    response.raise_for_status()
 
     # Log the success
     print(f"Successfully updated song on website: {song_info}")
